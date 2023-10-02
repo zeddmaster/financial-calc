@@ -28,15 +28,18 @@ const seriesq = computed(() => {
         type: 'line',
       },
       stroke: {
-        width: [0, 4]
+        width: [0, 4],
+        curve: 'smooth'
       },
       dataLabels: {
         enabled: true,
         enabledOnSeries: [1]
       },
-      labels: categories,
+
       xaxis: {
-        type: 'datetime'
+        type: 'numeric',
+        tickPlacement: 'between',
+        categories:categories
       },
       yaxis: [{
         axisTicks: {
